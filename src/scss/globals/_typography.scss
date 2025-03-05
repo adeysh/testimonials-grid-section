@@ -1,0 +1,14 @@
+@use '../util' as u;
+
+:root {
+    --f-body: #{u.rem(13)};
+    --scale: 1.25;
+
+    --f-s: calc(var(--f-body) / var(--scale));
+    --f-xs: calc(var(--f-s) / var(--scale));
+    --f-m: calc(var(--f-body) * var(--scale));
+    --f-l: calc(var(--f-m) * var(--scale));
+
+    --f-w-medium: 500;
+    --f-w-semi-bold: 600;
+}

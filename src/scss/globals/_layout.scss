@@ -1,0 +1,39 @@
+@use '../util' as u;
+
+.wrapper {
+    width: min(u.rem(1110), calc(100% - u.rem(58)));
+    margin-inline: auto;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    gap: u.rem(32);
+
+    @media screen and (width >=u.em(1110)) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "one one two five"
+            "three four four five";
+
+        .card-one {
+            grid-area: one;
+        }
+
+        .card-two {
+            grid-area: two;
+        }
+
+        .card-three {
+            grid-area: three;
+        }
+
+        .card-four {
+            grid-area: four;
+        }
+
+        .card-five {
+            grid-area: five;
+        }
+    }
+}

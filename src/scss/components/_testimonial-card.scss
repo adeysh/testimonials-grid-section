@@ -1,0 +1,90 @@
+@use '../util' as u;
+
+.testimonial-card {
+    position: relative;
+    z-index: 0;
+    padding: u.rem(22);
+    border-radius: u.rem(8);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: u.rem(22);
+        margin-block-end: u.rem(16);
+    }
+
+    &__image {
+        width: u.rem(40);
+
+        img {
+            border-radius: 50%;
+        }
+
+        border-radius: 50%;
+        padding: u.rem(3);
+
+        &--grey {
+            background-color: var(--purple-50);
+        }
+
+        &--purple {
+            background-color: var(--purple-500);
+        }
+    }
+
+    &__header--content {
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(5);
+    }
+
+    &__author {
+        font-size: var(--f-m);
+        font-weight: var(--f-w-medium);
+    }
+
+    &__role {
+        font-weight: var(--f-w-medium);
+    }
+
+    &__title {
+        font-size: var(--f-l);
+        font-weight: var(--f-w-semi-bold);
+        margin-block-end: u.rem(16);
+    }
+
+    &--purple {
+        background-color: var(--purple-500);
+        color: var(--grey-100);
+    }
+
+    &--dark-grey {
+        background-color: var(--grey-500);
+        color: var(--grey-100);
+
+    }
+
+    &--white {
+        background-color: var(--white);
+        color: var(--grey-500);
+    }
+
+    &--dark-blue {
+        background-color: var(--dark-blue);
+        color: var(--grey-100);
+    }
+}
+
+.quote {
+    position: absolute;
+    width: 120px;
+    top: u.rem(3);
+    right: u.rem(60);
+    z-index: -1;
+    display: none;
+
+    @media screen and (width >=u.em(375)) {
+        display: block;
+    }
+}

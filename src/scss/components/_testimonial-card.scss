@@ -72,19 +72,19 @@
 
     &--dark-blue {
         background-color: var(--dark-blue);
-        color: var(--grey-100);
+        color: var(--grey-200);
     }
 }
 
 .quote {
     position: absolute;
-    width: 120px;
+    width: 100px;
     top: u.rem(3);
     right: u.rem(60);
     z-index: -1;
     display: none;
 
-    @media screen and (width >=u.em(375)) {
+    @media screen and (width > u.em(375)) {
         display: block;
     }
 }
